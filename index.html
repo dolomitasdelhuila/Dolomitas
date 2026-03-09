@@ -24,21 +24,115 @@
         .nav-menu a:hover { color: #3b7a4a; }
         .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: #2b5e3b; }
         
-        /* Hero */
-        .hero { background: linear-gradient(115deg, rgba(241, 247, 240, 0.9), rgba(227, 238, 224, 0.9)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; padding: 4rem 0; border-bottom: 1px solid #d0dfcc; position: relative; overflow: hidden; }
-        .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #2b5e3b, #8bc34a, #2b5e3b); }
-        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-        .hero-content h2 { font-size: 3rem; font-weight: 700; line-height: 1.2; color: #1c4b2d; margin-bottom: 1.5rem; text-shadow: 0 2px 4px rgba(255,255,255,0.5); }
-        .hero-content p { font-size: 1.2rem; color: #2d3f31; margin-bottom: 2rem; max-width: 90%; }
-        .btn { display: inline-block; background-color: #2b5e3b; color: white; font-weight: 600; padding: 0.9rem 2rem; border-radius: 40px; text-decoration: none; transition: all 0.3s ease; border: none; cursor: pointer; font-size: 1rem; box-shadow: 0 4px 15px rgba(43, 94, 59, 0.3); }
-        .btn:hover { background-color: #1f472b; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(43, 94, 59, 0.4); }
-        .btn-outline { background-color: transparent; color: #2b5e3b; border: 2px solid #2b5e3b; margin-left: 1rem; box-shadow: none; }
-        .btn-outline:hover { background-color: #2b5e3b; color: white; transform: translateY(-2px); }
-        .hero-stats { display: flex; gap: 2.5rem; margin-top: 2.5rem; }
-        .stat-item { display: flex; flex-direction: column; background: rgba(255,255,255,0.7); backdrop-filter: blur(5px); padding: 1rem 1.5rem; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .stat-number { font-size: 2rem; font-weight: 700; color: #2b5e3b; }
-        .stat-label { font-size: 0.95rem; color: #4f5e53; }
-        .hero-image { background-color: rgba(199, 221, 195, 0.5); backdrop-filter: blur(5px); height: 350px; border-radius: 30px; display: flex; align-items: center; justify-content: center; color: #2b5e3b; font-size: 1.2rem; overflow: hidden; box-shadow: 0 20px 40px rgba(0,40,20,0.2); border: 1px solid rgba(255,255,255,0.3); }
+        /* Hero - MÁS ENCENDIDO */
+        .hero { 
+            background: linear-gradient(115deg, rgba(43, 94, 59, 0.85), rgba(139, 195, 74, 0.85)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); 
+            background-size: cover; 
+            background-position: center; 
+            padding: 4rem 0; 
+            border-bottom: 1px solid #d0dfcc; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        .hero::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            height: 4px; 
+            background: linear-gradient(90deg, #f0b429, #f59e0b, #f0b429); 
+        }
+        .hero-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 3rem; 
+            align-items: center; 
+        }
+        .hero-content h2 { 
+            font-size: 3rem; 
+            font-weight: 700; 
+            line-height: 1.2; 
+            color: white; 
+            margin-bottom: 1.5rem; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+        }
+        .hero-content p { 
+            font-size: 1.2rem; 
+            color: white; 
+            margin-bottom: 2rem; 
+            max-width: 90%;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3); 
+        }
+        .btn { 
+            display: inline-block; 
+            background: linear-gradient(135deg, #f0b429, #f59e0b); 
+            color: #1e2f23; 
+            font-weight: 700; 
+            padding: 0.9rem 2rem; 
+            border-radius: 40px; 
+            text-decoration: none; 
+            transition: all 0.3s ease; 
+            border: none; 
+            cursor: pointer; 
+            font-size: 1rem; 
+            box-shadow: 0 4px 15px rgba(240, 180, 41, 0.4); 
+        }
+        .btn:hover { 
+            background: linear-gradient(135deg, #f59e0b, #f0b429); 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 20px rgba(240, 180, 41, 0.5); 
+        }
+        .btn-outline { 
+            background: transparent; 
+            color: white; 
+            border: 2px solid white; 
+            margin-left: 1rem; 
+            box-shadow: none; 
+        }
+        .btn-outline:hover { 
+            background: white; 
+            color: #2b5e3b; 
+            transform: translateY(-2px); 
+        }
+        .hero-stats { 
+            display: flex; 
+            gap: 2.5rem; 
+            margin-top: 2.5rem; 
+        }
+        .stat-item { 
+            display: flex; 
+            flex-direction: column; 
+            background: rgba(255,255,255,0.95); 
+            backdrop-filter: blur(5px); 
+            padding: 1rem 1.5rem; 
+            border-radius: 20px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid #f0b429; 
+        }
+        .stat-number { 
+            font-size: 2rem; 
+            font-weight: 700; 
+            color: #2b5e3b; 
+        }
+        .stat-label { 
+            font-size: 0.95rem; 
+            color: #4f5e53; 
+        }
+        .hero-image { 
+            background-color: rgba(255, 255, 255, 0.2); 
+            backdrop-filter: blur(5px); 
+            height: 350px; 
+            border-radius: 30px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            font-size: 1.2rem; 
+            overflow: hidden; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3); 
+            border: 2px solid rgba(255,255,255,0.5); 
+        }
         
         /* Secciones generales */
         .section { padding: 5rem 0; position: relative; }
@@ -265,7 +359,7 @@
     </header>
 
     <main>
-        <!-- HERO -->
+        <!-- HERO - MÁS ENCENDIDO -->
         <section id="inicio" class="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
