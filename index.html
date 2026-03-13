@@ -299,12 +299,17 @@
         .contact-simple { background: white; border-radius: 50px; padding: 3rem; box-shadow: 0 30px 50px -20px rgba(0, 40, 20, 0.3); text-align: center; max-width: 700px; margin: 0 auto; border: 1px solid rgba(255,255,255,0.8); }
         .contact-simple h3 { font-size: 2rem; font-weight: 700; color: #1c4b2d; margin-bottom: 1.5rem; }
         .contact-simple p { font-size: 1.2rem; color: #4f6456; margin-bottom: 2rem; }
-        .contact-buttons { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; }
-        .contact-button { display: inline-flex; align-items: center; gap: 0.8rem; padding: 1.2rem 2.5rem; border-radius: 60px; text-decoration: none; font-weight: 600; font-size: 1.2rem; transition: all 0.3s ease; border: none; cursor: pointer; }
+        .contact-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+        .contact-button { display: inline-flex; align-items: center; gap: 0.8rem; padding: 1rem 1.8rem; border-radius: 60px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; border: none; cursor: pointer; margin: 0.5rem; }
+        .contact-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
         .contact-button.whatsapp { background-color: #25D366; color: white; }
         .contact-button.phone { background-color: #2b5e3b; color: white; }
-        .contact-details-mini { margin-top: 2rem; color: #6f8b7a; }
-        .contact-details-mini a { color: #2b5e3b; text-decoration: none; font-weight: 500; }
+        .contact-button.phone2 { background-color: #1e4a2c; color: white; }
+        .contact-button.phone3 { background-color: #3d8b4f; color: white; }
+        .contact-details-mini { margin-top: 2rem; color: #6f8b7a; display: flex; flex-direction: column; gap: 0.8rem; align-items: center; }
+        .contact-details-mini a { color: #2b5e3b; text-decoration: none; font-weight: 500; margin: 0 0.5rem; white-space: nowrap; }
+        .contact-details-mini a:hover { text-decoration: underline; }
+        .contact-row { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
         
         /* Galería */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
@@ -317,7 +322,9 @@
         /* Footer */
         footer { background: linear-gradient(115deg, #1e2f23, #2b5e3b); color: #c0dbc0; padding: 2rem 0; text-align: center; position: relative; overflow: hidden; }
         footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, #8bc34a, transparent); }
-        footer a { color: #a0d8a0; text-decoration: none; }
+        footer a { color: #a0d8a0; text-decoration: none; margin: 0 0.5rem; white-space: nowrap; }
+        footer a:hover { color: white; text-decoration: underline; }
+        footer .contactos { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1rem; }
         
         /* Responsive */
         @media (max-width: 900px) {
@@ -331,7 +338,10 @@
             .tab-btn { padding: 12px 20px; font-size: 1rem; min-width: 140px; }
             .product-header { flex-direction: column; text-align: center; }
             .product-header h3 { font-size: 1.8rem; }
-            .contact-buttons { flex-direction: column; }
+            .contact-buttons { flex-direction: column; align-items: center; }
+            .contact-button { width: 100%; max-width: 300px; justify-content: center; }
+            .contact-row { flex-direction: column; gap: 0.5rem; }
+            footer .contactos { flex-direction: column; gap: 0.5rem; }
         }
         
         @media (max-width: 480px) {
@@ -564,28 +574,50 @@
             </div>
         </section>
 
-        <!-- CONTACTO -->
+        <!-- CONTACTO - ACTUALIZADO CON NUEVOS NÚMEROS -->
         <section id="contacto" class="section">
             <div class="container">
                 <div class="contact-simple">
                     <h3>Contáctanos</h3>
                     <p>Cotiza la cantidad que necesites</p>
+                    
+                    <!-- Botones de contacto -->
                     <div class="contact-buttons">
-                        <a href="https://wa.me/573052468956?text=Hola%2C%20quiero%20cotizar%20productos" class="contact-button whatsapp" target="_blank">📱 WhatsApp</a>
-                        <a href="tel:+573052468956" class="contact-button phone">📞 Llamar</a>
+                        <!-- WhatsApp nuevo -->
+                        <a href="https://wa.me/573023032825?text=Hola%2C%20quiero%20cotizar%20productos" class="contact-button whatsapp" target="_blank">📱 WhatsApp: 302 3032825</a>
+                        
+                        <!-- Tres botones de llamada -->
+                        <a href="tel:+573052468956" class="contact-button phone">📞 305 2468956</a>
+                        <a href="tel:+573052284826" class="contact-button phone2">📞 305 2284826</a>
+                        <a href="tel:+573143330170" class="contact-button phone3">📞 314 3330170</a>
                     </div>
+                    
+                    <!-- Email y ubicación -->
                     <div class="contact-details-mini">
-                        <p>✉️ <a href="mailto:dolomitashuila@hotmail.com">dolomitashuila@hotmail.com</a></p>
-                        <p>📍 Km 5 vía Palermo, Neiva</p>
+                        <div class="contact-row">
+                            <span>✉️ <a href="mailto:dolomitashuila@hotmail.com">dolomitashuila@hotmail.com</a></span>
+                        </div>
+                        <div class="contact-row">
+                            <span>📍 Km 5 vía Palermo, Neiva</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- FOOTER ACTUALIZADO -->
     <footer>
         <div class="container">
-            <p>© 2025 Dolomitas del Huila · Venta en cualquier cantidad · 📞 <a href="tel:+573052468956">+57 305 246 8956</a> · Neiva, Colombia</p>
+            <p>© 2025 Dolomitas del Huila · Venta en cualquier cantidad</p>
+            <div class="contactos">
+                <span>📱 <a href="https://wa.me/573023032825">302 3032825</a></span>
+                <span>📞 <a href="tel:+573052468956">305 2468956</a></span>
+                <span>📞 <a href="tel:+573052284826">305 2284826</a></span>
+                <span>📞 <a href="tel:+573143330170">314 3330170</a></span>
+                <span>✉️ <a href="mailto:dolomitashuila@hotmail.com">dolomitashuila@hotmail.com</a></span>
+            </div>
+            <p style="margin-top: 1rem;">📍 Km 5 vía Palermo, Neiva, Colombia</p>
         </div>
     </footer>
 
